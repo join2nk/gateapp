@@ -1,0 +1,163 @@
+<div class="container mainPage" id="mainPage">
+    <h1>Gate Keeper</h1>
+    <div class="card px-4 py-3 " style="border:1px solid #555;">
+
+        <% list.forEach(data => { %>
+        <div class="card px-3 d-inline my-2 " onclick="goToInwordForm(<%=data.id%>)">
+            Id : <div class="mpost d-inline"> <b> <%= data.id %> </b> </div>
+            Truck no : <div class="d-inline bg-warning  px-1 rounded mpost "> <b> <%= data.truckNo %> </b></div>
+            <hr class="d-sm-none m-1">
+            For : <div class="mpost d-inline"> <b> <%= data.inwardFor %> <% if (data.inwardFor == 'loading'){%>&nbsp &nbsp<%} %>   </b> </div>
+            Broker: <div class="mpost d-inline"> <b> <%= data.broker %> </b> </div>
+
+        </div>
+
+        <% }) %>
+
+
+    </div>
+    <div>
+        <button class="btn-sm btn-primary m-4" onclick="goToInwordForm('creatnew')">Truck in</button>
+
+    </div>
+    <!-- <div class="popup" onclick="myFunction('myPopup')">Click me!
+        <span class="popuptext" id="myPopup">Popup text...</span>
+    </div> -->
+    <div class="card p-2">
+        <details>
+            <summary>
+                this is summary
+            </summary>
+            <p> <br> this si detailed view of the above heading <br>
+            <input type="submit" value="btn button" class="btn-sm btn-difault my-2 " disabled='disabled'>
+            </p>
+        </details>
+    </div>
+
+</div>
+
+<div class="container addInwordForm" id="addInwordForm">
+    <fieldset> <small>
+            <legend>Inward</legend>
+            <form action="/inwardForm/creatnew" method="post">
+                <input id="inwardDate" name="date"class="d-none" value ="" >
+                Date : <span id="date"></span><br><br>
+                <!--  to come editdate button -->
+                <!-- ejs for all inward  -->
+                Truck in For : <select name="inFor" class="form-select" aria-label="Default select example">
+                    <option value="0">unloading</option>
+                    <option value="1">loading</option>
+                </select><br><br>
+                <label for="truckNo">Truck no : </label><br><input type="text" id="truckNo" name="truckNo"><br><br>
+                <label for="broker">Broker :</label><br>
+                <input type="text" id="broker" name="broker"><br><br>
+                <input type="submit" value="Submit" class="btn-sm btn-primary">
+            </form>
+        </small>
+    </fieldset>
+</div>
+
+
+
+
+
+<script>
+    document.getElementById('addInwordForm').style.display = 'none'
+    //add new inward form gate
+    //dont dispaly mainpage 
+    
+    function goToInwordForm(dataid) {
+        mainPage = document.getElementById('mainPage')
+        mainPage.style.display = "none"
+        addInwordForm = document.getElementById('addInwordForm')
+        addInwordForm.style.display = "block"
+        date = new Date().toLocaleString()
+        datespan = document.getElementById('date')
+        datespan.innerHTML = date
+        document.getElementById('inwardDate').value = date
+    }
+
+    function goToMainPage() {
+        mainPage = document.getElementById('mainPage')
+        mainPage.style.display = "block"
+        addInwordForm = document.getElementById('addInwordForm')
+        addInwordForm.style.display = "none"
+    }
+    // When the user clicks on <div>, open the popup
+    function myFunction(myPopup) {
+        var popup = document.getElementById(myPopup);
+        popup.classList.toggle("show");
+    }
+</script>
+<style>
+    .form-select {
+        padding: 1px;
+        width: 180px;
+        font-size: small;
+        display: inline-block;
+    }
+</style>
+<style>
+    /* Popup container */
+    .popup {
+        position: relative;
+        display: inline-block;
+        cursor: pointer;
+    }
+
+    /* The actual popup (appears on top) */
+    .popup .popuptext {
+        visibility: hidden;
+        width: 160px;
+        background-color: #555;
+        color: #fff;
+        text-align: center;
+        border-radius: 6px;
+        padding: 8px 0;
+        position: absolute;
+        z-index: 1;
+        bottom: 125%;
+        left: 50%;
+        margin-left: -80px;
+    }
+
+    /* Popup arrow */
+    .popup .popuptext::after {
+        content: "";
+        position: absolute;
+        top: 100%;
+        left: 50%;
+        margin-left: -5px;
+        border-width: 5px;
+        border-style: solid;
+        border-color: #555 transparent transparent transparent;
+    }
+
+    /* Toggle this class when clicking on the popup container (hide and show the popup) */
+    .popup .show {
+        visibility: visible;
+        -webkit-animation: fadeIn 1s;
+        animation: fadeIn 1s
+    }
+
+    /* Add animation (fade in the popup) */
+    @-webkit-keyframes fadeIn {
+        from {
+            opacity: 0;
+        }
+
+        to {
+            opacity: 1;
+        }
+    }
+
+    @keyframes fadeIn {
+        from {
+            opacity: 0;
+        }
+
+        to {
+            opacity: 1;
+        }
+    }
+</style>

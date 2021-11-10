@@ -1,0 +1,100 @@
+{
+  "dataList": [
+    {
+      "date": "11/10/2021, 7:54:19 AM",
+      "id": "1",
+      "inwardFor": "unloading",
+      "truckType": "small",
+      "transport": "",
+      "truckNo": "CG 04 j 2311",
+      "broker": "rahul sharma",
+      "party": "",
+      "munsi": "",
+      "hemalAsigned": "",
+      "startTime": "",
+      "endTime": "",
+      "itmes": [
+        {
+          "id": "",
+          "for": "",
+          "hemal": "",
+          "work": ""
+        }
+      ],
+      "naration": "",
+      "by": "",
+      "gpno": "",
+      "tareWt": "",
+      "grossWt": "",
+      "netWt": "",
+      "unit": "",
+      "naration2": "",
+      "overRide": false,
+      "outNaration": ""
+    },
+    {
+      "date": "",
+      "id": "2",
+      "inwardFor": "unloading",
+      "truckType": "small",
+      "transport": "",
+      "truckNo": "CG 04 j 2311",
+      "broker": "Ram niwas",
+      "party": "arun charouda",
+      "munsi": "",
+      "hemalAsigned": "",
+      "startTime": "",
+      "endTime": "",
+      "itmes": [
+        {
+          "id": "",
+          "for": "",
+          "hemal": "",
+          "work": ""
+        }
+      ],
+      "naration": "",
+      "by": "",
+      "gpno": "",
+      "tareWt": "",
+      "grossWt": "",
+      "netWt": "",
+      "unit": "",
+      "naration2": "",
+      "overRide": false,
+      "outNaration": ""
+    },
+    {
+      "date": "",
+      "id": "3",
+      "inwardFor": "loading",
+      "truckType": "big",
+      "transport": "gauri transport",
+      "truckNo": "CG 04 j 2311",
+      "broker": "dilip sharma",
+      "party": "",
+      "munsi": "",
+      "hemalAsigned": "",
+      "startTime": "",
+      "endTime": "",
+      "itmes": [
+        {
+          "id": "",
+          "for": "",
+          "hemal": "",
+          "work": ""
+        }
+      ],
+      "naration": "",
+      "by": "",
+      "gpno": "",
+      "tareWt": "",
+      "grossWt": "",
+      "netWt": "",
+      "unit": "",
+      "naration2": "",
+      "overRide": false,
+      "outNaration": ""
+    }
+  ]
+}

@@ -1,0 +1,43 @@
+
+<div class="container">
+<h1>Cost Cal</h1>
+<h4> items used</h4>
+
+<% 
+let list = [
+    {
+        element:"input",
+        placeholder:"hellother",
+        type:"text",
+    },
+    {
+        element:"div",
+        content:"this is a div"
+    }
+];
+%>
+
+<%
+list.forEach(elementObj => {
+%>
+    <<%=elementObj["element"]%> 
+<%for (key in elementObj){%> 
+     <% if(key!="element"||"content"){%> 
+     <%=key%> = <%=elementObj[key]%> 
+     <%}%>
+     
+<%}%>
+ > <%=(elementObj["content"])?elementObj["content"]:"";%> </<%=elementObj["element"]%>>
+<%});%>
+
+
+
+
+<%- include('../comp/enteritem') -%>
+
+<h4>items recieved</h4>
+<kbd >asdf</kbd><ins>aldsf</ins><del>sadfkja</del>
+<h4>expenses</h4>
+
+<h4>income</h4>
+</div>
